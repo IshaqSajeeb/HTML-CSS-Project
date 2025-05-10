@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <STYLE>
+    div {
+    width:100%
+    max-width:1200px;
+    min-width:600px;
+    margin:0 auto;
+    text-align:center;
+    display:inline-block
+    }
+    div img {
+    width:200px;
+    transition: 1s ease-in
+    }
+    div img:hover {
+    rotate:360deg;
+    scale:1.2
+    }
+    </STYLE>
+</head>
+<body>
+    <h1>CSS Box Model</h1>
+    <p> CSS box model is the box that wraps the content of an element. Box model has 4 parts:content, padding, border, margin</p>
+    <hr>
+    <div>
+        <img src="image/p1.jpg" alt="">
+        <img src="image/p2.jpg" alt="">
+        <img src="image/p3.jpg" alt="">
+        <img src="image/p4.jpg" alt="">
+        <img src="image/p5.jpg" alt="">
+        <img src="image/p6.jpg" alt="">
+        <img src="image/p7.jpg" alt="">
+    </div>
+<!-- Code injected by live-server -->
+<script>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+(function () {
+function refreshCSS() {
+var sheets = [].slice.call(document.getElementsByTagName("link&quot￼);
+var head = document.getElementsByTagName("head&quot￼[0];
+for (var i = 0; i < sheets.length; ++i) {
+var elem = sheets[i];
+var parent = elem.parentElement || head;
+parent.removeChild(elem);
+var rel = elem.rel;
+if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet&quot￼ {
+var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+}
+parent.appendChild(elem);
+}
+}
+var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+var address = protocol + window.location.host + window.location.pathname + '/ws';
+var socket = new WebSocket(address);
+socket.onmessage = function (msg) {
+if (msg.data == 'reload') window.location.reload();
+else if (msg.data == 'refreshcss') refreshCSS();
+};
+if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+console.log('Live reload enabled.');
+sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+}
+})();
+}
+else {
+console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
+</script>
+</body>
+</html>
